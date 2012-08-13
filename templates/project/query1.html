@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+
+<title></title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/static/css/screen.css" />
+    <script src="/static/js/jquery-1.7.1.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#example thead tr th input").click(function(){
+                //alert("pressed.");
+                if ($(this).attr("checked")=="checked")
+                {
+                    $("input[name='id']").each(function() {
+                        $(this).attr("checked", "checked");
+                    });
+                  //alert("pressed.");
+                }
+                else
+                {
+                    $("input[name='id']").each(function() {
+                         $(this).attr("checked", false);
+                     });
+                }
+                //alert($(this).attr("checked"));
+            })
+
+        })
+
+    </script>
+
+
+</head>
+
+<body>
+<div class="container">
+  <div class="table-container">
+      <table class="paleblue" id="example">
+          <thead>
+            <tr>
+                <th class="id"><input type="checkbox" name="checkedAll" id="checkedAll"/></th>
+                <th class="name">Name</th>
+                <th class="orderable price sortable"><a href="?1-sort=price">Price</a></th>
+                <th class="description">Description</th>
+                <th class="desc orderable release_date sortable"><a href="?1-sort=release_date">Release Date</a></th>
+                <th class="manufacturer">Manufacturer</th>
+            </tr>
+          </thead>
+          <tbody><tr class="odd"><td class="id"><input type="checkbox" name="id" value="1"/></td><td class="name">surface</td><td class="price">199</td><td class="description">notepad computer</td><td class="release_date">Aug. 31, 2012</td><td class="manufacturer">Lenovel</td></tr><tr class="even"><td class="id"><input type="checkbox" name="id" value="2"/></td><td class="name">RS6000</td><td class="price">6000</td><td class="description">Microcomputer</td><td class="release_date">Aug. 22, 2012</td><td class="manufacturer">IBM</td></tr><tr class="odd"><td class="id"><input type="checkbox" name="id" value="4"/></td><td class="name">Thinkpad x1</td><td class="price">200</td><td class="description">mobile computer</td><td class="release_date">Aug. 20, 2012</td><td class="manufacturer">Lenovel</td></tr><tr class="even"><td class="id"><input type="checkbox" name="id" value="5"/></td><td class="name">Window 8</td><td class="price">300</td><td class="description">operating system</td><td class="release_date">Aug. 20, 2012</td><td class="manufacturer">Lenovel</td></tr><tr class="odd"><td class="id"><input type="checkbox" name="id" value="6"/></td><td class="name">Hp LH3000</td><td class="price">400</td><td class="description">PC server</td><td class="release_date">Aug. 14, 2012</td><td class="manufacturer">HP</td></tr><tr class="even"><td class="id"><input type="checkbox" name="id" value="7"/></td><td class="name">Mac pro</td><td class="price">700</td><td class="description">PC computer</td><td class="release_date">Aug. 7, 2012</td><td class="manufacturer">Apple</td></tr><tr class="odd"><td class="id"><input type="checkbox" name="id" value="3"/></td><td class="name">ipad</td><td class="price">399</td><td class="description">notepad computer</td><td class="release_date">Aug. 2, 2012</td><td class="manufacturer">Apple</td></tr><tr class="even"><td class="id"><input type="checkbox" name="id" value="8"/></td><td class="name">P4</td><td class="price">100</td><td class="description">cpu</td><td class="release_date">Aug. 2, 2012</td><td class="manufacturer">Intel</td></tr></tbody><tfoot></tfoot></table><ul class="pagination"><li class="current">Page 1 of 1</li></ul></div>
+
+    
+
+    
+
+  <!-- end .container --></div>
+
+    </body>
+</html>
